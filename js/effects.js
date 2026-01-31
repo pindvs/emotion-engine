@@ -237,7 +237,8 @@ export function initEffects( player, THREE ) {
 		<div style="margin-top:8px;font-weight:600;">Orb colors</div>
 		<div id="orbColors"></div>
 		`;
-	document.body.appendChild( ui );
+	/*showui*/
+	/*document.body.appendChild( ui );*/
 
 	const orbColorsDiv = ui.querySelector( '#orbColors' );
 	for ( let i = 0; i < ORB_COUNT; i ++ ) {
