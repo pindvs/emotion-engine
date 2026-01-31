@@ -18,7 +18,7 @@ export function initEffects( player, THREE ) {
 		fogFar: 16,
 		particleSpeed: 0.10,
 		particleSize: 60,
-		particleOpacity: 0.19,
+		particleOpacity: 1,
 		particleY: -1.8,
 		parallaxAmount: 2.5,
 		orbSpeed: 0.4,
@@ -46,7 +46,7 @@ export function initEffects( player, THREE ) {
 	const loader = new THREE.TextureLoader();
 	const smokeTex = loader.load( 'smoke.png' );
 
-	const PARTICLE_COUNT = 700;
+	const PARTICLE_COUNT = 100;
 	const positions = new Float32Array( PARTICLE_COUNT * 3 );
 	const speeds = new Float32Array( PARTICLE_COUNT );
 
@@ -238,7 +238,7 @@ export function initEffects( player, THREE ) {
 		<div id="orbColors"></div>
 		`;
 	/*showui*/
-	/*document.body.appendChild( ui );*/
+	document.body.appendChild( ui );
 
 	const orbColorsDiv = ui.querySelector( '#orbColors' );
 	for ( let i = 0; i < ORB_COUNT; i ++ ) {
